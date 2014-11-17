@@ -91,7 +91,7 @@ typedef NS_ENUM(NSUInteger, TUTimeJumpType)
 	static TUDelorean *instance = nil;
 	static dispatch_once_t onceToken;
 	dispatch_once(&onceToken, ^{
-		instance = [[TUDelorean alloc] init];
+		instance = [[[self class] alloc] init];
 	});
 
 	return instance;
